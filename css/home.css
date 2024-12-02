@@ -13,26 +13,26 @@ body {
 header {
     width: 50px;
     height: 100vh;
-    background: linear-gradient(#121b6a, #0e165f);
+    background: linear-gradient(#313038, #2d2a3b);
     position: fixed;
     right: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-direction: column;
-    box-shadow: 1px 1px 3px 3px #9597af;
+    box-shadow: 1px 1px 3px 3px #413f4b;
     z-index: 999;
 }
 
 header .logoHeader {
     width: 130px;
     height: 150px;
-    background: #4d57b7;
+    background: #212026;
     border-bottom-left-radius: 100%;
     text-align: center;
     position: relative;
     margin-right: 30px;
-    box-shadow: 1px 1px 3px 3px #9597af;
+    box-shadow: 1px 1px 3px 3px #413f4b;
 }
 
 header .logoHeader img {
@@ -55,7 +55,7 @@ header nav {
 
 header nav a {
     font-size: 1.5em;
-    color: #b3b4c7;
+    color: #413f4b;
 }
 
 section {
@@ -64,9 +64,7 @@ section {
     align-items: center;
     height: 100vh;
     padding: 30px;
-    background: #ffdecf url(../img/backgorundAnimasi.gif);
-    background-repeat: no-repeat;
-    background-size: cover;
+    background: #f2ffb7;
 }
 
 section .left {
@@ -82,7 +80,7 @@ section .left .deskripsi h1 {
     margin-top: -30px;
     font-size: 3.5rem;
     letter-spacing: -3px;
-    color: #3a7ca5;
+    color: #54711b;
     font-family: "Fira Sans Condensed",
         sans-serif;
 }
@@ -98,7 +96,7 @@ section .left .deskripsi h3 {
 section .left p {
     text-indent: 30px;
     font-size: 2rem;
-    color: #bebbe2;
+    color: #1f2729;
     font-family: "Estonia",
         cursive;
     font-weight: bold;
@@ -113,7 +111,7 @@ section .left .icon {
 
 section .left .icon .iconPegawai,
 section .left .icon .iconProduk {
-    background: linear-gradient(#383f7c, #424fc6)
+    background-color: #3a8f2b;
 }
 
 section .left .icon .iconPegawai .memberPegawai,
@@ -127,7 +125,7 @@ section .left .icon .iconProduk .memberProduk {
     overflow-x: hidden;
     max-height: 400px;
     padding: 10px;
-    border-top: 3px solid #8da3d8;
+    border-top: 3px solid black;
 }
 
 @media (max-width: 768px) {
@@ -148,12 +146,12 @@ section .left .icon .iconProduk .memberProduk {
 /* Scrollbar untuk browser berbasis Webkit (Chrome, Edge, Safari) */
 section .left .icon .iconPegawai .memberPegawai::-webkit-scrollbar,
 section .left .icon .iconProduk .memberProduk::-webkit-scrollbar {
-    width: 5px;
+    width: 8px;
 }
 
 section .left .icon .iconPegawai .memberPegawai::-webkit-scrollbar-thumb,
 section .left .icon .iconProduk .memberProduk::-webkit-scrollbar-thumb {
-    background-color: #978eba;
+    background-color: #6cae29;
     border-radius: 10px;
 }
 
@@ -179,10 +177,10 @@ section .left .icon .iconProduk {
 
 section .left .icon .iconPegawai a,
 section .left .icon .iconProduk a {
-    font-size: 1em;
-    border-bottom: 3px solid #5a67a8;
+    font-size: 1.4em;
+    border-bottom: 3px solid #6cae29;
     margin-bottom: 15px;
-    color: #ceced4;
+    color: #1f2729;
 }
 
 section .left .icon .iconPegawai .memberPegawai .pegawai,
@@ -190,8 +188,8 @@ section .left .icon .iconProduk .memberProduk .produk {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    border-bottom: 3px solid rgb(46, 43, 101);
-    background:#5e63ae;
+    border-bottom: 3px solid black;
+    background-color: red;
     border-radius: 10px;
     margin: 1px;
     padding-right: 5px;
@@ -219,7 +217,7 @@ section .left .icon .iconProduk .memberProduk .produk .imgProduk img {
 
 section .left .icon .iconPegawai .memberPegawai .pegawai .keteranganPegawai,
 section .left .icon .iconProduk .memberProduk .produk .keteranganProduk {
-    border-left: 3px solid rgb(149, 145, 216);
+    border-left: 3px solid black;
     padding: 3px;
 }
 
@@ -228,14 +226,12 @@ section .left .icon .iconProduk .memberProduk .produk .keteranganProduk h3 {
     font-size: 1.3em;
     letter-spacing: -1px;
     margin-left: 5px;
-    color: #a3b2bc;
 }
 
 section .left .icon .iconPegawai .memberPegawai .pegawai .keteranganPegawai p,
 section .left .icon .iconProduk .memberProduk .produk .keteranganProduk p {
-    width: 100%;
-    font-size: 1.5em;
-    text-align: right;
+    font-size: 1.1em;
+    text-align: center;
 }
 
 
@@ -290,25 +286,19 @@ section .right .imgRight img#belakang {
 .memberPegawaiLengkap,
 .memberProdukLengkap {
     padding: 15px;
-    max-height: 200vh;
+    max-height: 100vh;
     border-top: 3px solid black;
-    background: #ebdab9ed;
-
 }
 
-/* .memberProdukLengkap {
+.memberProdukLengkap {
     margin-top: 300px;
-} */
+}
 
 .memberPegawaiLengkap h1#title,
 .memberProdukLengkap h1#title {
     text-align: center;
     font-size: 3em;
     letter-spacing: -1px;
-    font-family: "Fira Sans Condensed",
-    sans-serif;
-    color: #828223;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); 
 }
 
 .memberPegawaiLengkap .fullPegawai,
@@ -323,10 +313,6 @@ section .right .imgRight img#belakang {
     letter-spacing: -2px;
     margin-left: 50px;
     padding: 10px;
-    color: #828223;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);    
-    font-family: "Fira Sans Condensed",
-    sans-serif;
 }
 
 .memberPegawaiLengkap .fullPegawai .pegawai,
@@ -345,8 +331,7 @@ section .right .imgRight img#belakang {
 /* Styling optional untuk scrollbar */
 .memberPegawaiLengkap .fullPegawai .pegawai::-webkit-scrollbar,
 .memberProdukLengkap .fullProduk .produk::-webkit-scrollbar {
-    height: 3px;
-    width: 100px;
+    height: 8px;
 }
 
 .memberPegawaiLengkap .fullPegawai .pegawai::-webkit-scrollbar-thumb,
@@ -363,7 +348,7 @@ section .right .imgRight img#belakang {
 
 .fullPegawai .pegawai .ketPegawai,
 .fullProduk .produk .ketProduk {
-    background-color: #dfde95e1;
+    background-color: rebeccapurple;
     padding: 20px;
     border-radius: 30px;
     width: 300px;
@@ -375,7 +360,6 @@ section .right .imgRight img#belakang {
     position: relative;
     margin: 10px;
     flex-shrink: 0;
-    box-shadow: 0 1px 5px rgba(116, 113, 86, 0.352), 0 1px 2px rgba(143, 138, 81, 0.659);
 }
 
 
@@ -383,7 +367,7 @@ section .right .imgRight img#belakang {
 .produk .ketProduk .gambarProduk {
     position: absolute;
     top: 0px;
-    width: 40%;
+    width: 56%;
     cursor: pointer;
 }
 
@@ -411,30 +395,18 @@ section .right .imgRight img#belakang {
     align-items: center;
     padding: 10px;
     max-height: 150px;
-    flex-direction: column;
 }
-.pegawai .ketPegawai .deskripsiPegawai h2,
-.produk .ketProduk .deskripsiProduk h2{
-    font-size: 2.5rem;
-    margin-bottom: 10px;
-    color: #52521b;
 
-}   
-.pegawai .ketPegawai .deskripsiPegawai h4,
-.produk .ketProduk .deskripsiProduk h4{
-    font-size: 2rem;
-    color: #777736;
-}   
-
+.pegawai .ketPegawai .kataPegawai,
+.produk .ketProduk .kataProduk {
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
 
 .pegawai .ketPegawai .iconPegawai,
 .produk .ketProduk .iconProduk {
     width: 100%;
     text-align: right;
-}
-.pegawai .ketPegawai .iconPegawai a,
-.produk .ketProduk .iconProduk a{
-    color: #4d81ae;
 }
 
 .fullPegawai .iconLengkapPegawai,
@@ -447,17 +419,7 @@ section .right .imgRight img#belakang {
 .fullPegawai .iconLengkapPegawai a,
 .fullProduk .iconLengkapProduk a {
     margin: 0 30px;
-    font-size: 1.3em;
 }
-.fullPegawai .iconLengkapPegawai a:first-child,
-.fullProduk .iconLengkapProduk a:first-child{
-    color: #4f9d4f;
-}
-.fullPegawai .iconLengkapPegawai a:last-child,
-.fullProduk .iconLengkapProduk a:last-child{
-    color: #b05050;
-}
-
 
 .memberProdukLengkap .deskripsiLainnyaProduk {
     display: flex;
@@ -472,8 +434,4 @@ section .right .imgRight img#belakang {
     justify-content: center;
     align-items: center;
     padding: 30px;
-    margin: 0 20px;
-}
-.memberPegawaiLengkap .deskripsiLainnyaPegawai .textDeskripsiPegawai{
-    margin: 0 20px;
 }

@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home | </title>
     <link rel="stylesheet" href="../css/home.css">
-    <link rel="stylesheet" href="../css/tambah.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 
@@ -24,8 +23,8 @@
     <section>
         <aside class="left">
             <div class="deskripsi">
-                <h1>Jabinsar Saragih</h1>
-                <h3>CEO</h3>
+                <h1>Hulu Strore</h1>
+                <h3>Pemilik</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, voluptatem.</p>
             </div>
             <div class="icon">
@@ -151,9 +150,13 @@
                     </div>
                     <div class="deskripsiPegawai">
                         <h2>Jabinsar Saragih</h2>
+                        <h4>CEO</h4>
+                    </div>
+                    <div class="kataPegawai">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, maiores.</p>
                     </div>
                     <div class="iconPegawai">
-                        <a href="#"><i class="fa-solid fa-user-pen"></i></a>
+                        <a href="#">Edit</a>
                     </div>
                 </div>
                 <div class="ketPegawai">
@@ -162,9 +165,13 @@
                     </div>
                     <div class="deskripsiPegawai">
                         <h2>Jabinsar Saragih</h2>
+                        <h4>CEO</h4>
+                    </div>
+                    <div class="kataPegawai">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, maiores.</p>
                     </div>
                     <div class="iconPegawai">
-                        <a href="#"><i class="fa-solid fa-user-pen"></i></a>
+                        <a href="#">Edit</a>
                     </div>
                 </div>
                 <div class="ketPegawai">
@@ -173,9 +180,13 @@
                     </div>
                     <div class="deskripsiPegawai">
                         <h2>Jabinsar Saragih</h2>
+                        <h4>CEO</h4>
+                    </div>
+                    <div class="kataPegawai">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, maiores.</p>
                     </div>
                     <div class="iconPegawai">
-                        <a href="#"><i class="fa-solid fa-user-pen"></i></a>
+                        <a href="#">Edit</a>
                     </div>
                 </div>
                 <div class="ketPegawai">
@@ -184,9 +195,13 @@
                     </div>
                     <div class="deskripsiPegawai">
                         <h2>Jabinsar Saragih</h2>
+                        <h4>CEO</h4>
+                    </div>
+                    <div class="kataPegawai">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, maiores.</p>
                     </div>
                     <div class="iconPegawai">
-                        <a href="#"><i class="fa-solid fa-user-pen"></i></a>
+                        <a href="#">Edit</a>
                     </div>
                 </div>
                 <div class="ketPegawai">
@@ -195,9 +210,13 @@
                     </div>
                     <div class="deskripsiPegawai">
                         <h2>Jabinsar Saragih</h2>
+                        <h4>CEO</h4>
+                    </div>
+                    <div class="kataPegawai">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, maiores.</p>
                     </div>
                     <div class="iconPegawai">
-                        <a href="#"><i class="fa-solid fa-user-pen"></i></a>
+                        <a href="#">Edit</a>
                     </div>
                 </div>
                 <div class="ketPegawai">
@@ -206,34 +225,20 @@
                     </div>
                     <div class="deskripsiPegawai">
                         <h2>Jabinsar Saragih</h2>
+                        <h4>CEO</h4>
+                    </div>
+                    <div class="kataPegawai">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, maiores.</p>
                     </div>
                     <div class="iconPegawai">
-                        <a href="#"><i class="fa-solid fa-user-pen"></i></a>
+                        <a href="#">Edit</a>
                     </div>
                 </div>
             </div>
-            <!-- TambahPegawai -->
-    <div class="tambah">
-        <div class="closeTambah">
-            <i class="fa-solid fa-xmark"></i>
-        </div>
-        <div class="ImgTambah">
-            <img src="../img/hulu store.png" alt="logoTambah">
-        </div>
-        <!-- Form Tambah -->
-        <form action="tambah.php" method='POST'>
-            <h1>Tambah</h1>
-            <div class="inputFoto">
-                <label for="file" class='label'>Foto</label>
-                <input type="file" class='input' name='file' id='file' required autocomplete="off">
+            <div class="iconLengkapPegawai">
+                <a href="#">Tambah</a>
+                <a href="#">Hapus</a>
             </div>
-            <div class="inputNama">
-                <label for="text" class='label'>Nama</label>
-                <input type="text" class='text' name='text' id='text' required autocomplete="off">
-            </div>
-        </form>
-    </div>
-
         </div>
         <div class="deskripsiLainnyaPegawai">
             <img src="../img/kakak01.avif" alt="gambarDeskripsiPegawai">
@@ -258,6 +263,10 @@
                     </div>
                     <div class="deskripsiProduk">
                         <h2>Chitato</h2>
+                        <h4>Makanan</h4>
+                    </div>
+                    <div class="kataProduk">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, maiores.</p>
                     </div>
                     <div class="iconProduk">
                         <a href="#">Edit</a>
@@ -269,6 +278,10 @@
                     </div>
                     <div class="deskripsiProduk">
                         <h2>Chitato</h2>
+                        <h4>Makanan</h4>
+                    </div>
+                    <div class="kataProduk">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, maiores.</p>
                     </div>
                     <div class="iconProduk">
                         <a href="#">Edit</a>
@@ -280,6 +293,10 @@
                     </div>
                     <div class="deskripsiProduk">
                         <h2>Chitato</h2>
+                        <h4>Makanan</h4>
+                    </div>
+                    <div class="kataProduk">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, maiores.</p>
                     </div>
                     <div class="iconProduk">
                         <a href="#">Edit</a>
@@ -291,6 +308,10 @@
                     </div>
                     <div class="deskripsiProduk">
                         <h2>Chitato</h2>
+                        <h4>Makanan</h4>
+                    </div>
+                    <div class="kataProduk">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, maiores.</p>
                     </div>
                     <div class="iconProduk">
                         <a href="#">Edit</a>
@@ -302,6 +323,10 @@
                     </div>
                     <div class="deskripsiProduk">
                         <h2>Chitato</h2>
+                        <h4>Makanan</h4>
+                    </div>
+                    <div class="kataProduk">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, maiores.</p>
                     </div>
                     <div class="iconProduk">
                         <a href="#">Edit</a>
@@ -313,6 +338,10 @@
                     </div>
                     <div class="deskripsiProduk">
                         <h2>Chitato</h2>
+                        <h4>Makanan</h4>
+                    </div>
+                    <div class="kataProduk">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, maiores.</p>
                     </div>
                     <div class="iconProduk">
                         <a href="#">Edit</a>
@@ -324,6 +353,10 @@
                     </div>
                     <div class="deskripsiProduk">
                         <h2>Chitato</h2>
+                        <h4>Makanan</h4>
+                    </div>
+                    <div class="kataProduk">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, maiores.</p>
                     </div>
                     <div class="iconProduk">
                         <a href="#">Edit</a>
