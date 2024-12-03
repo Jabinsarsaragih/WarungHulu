@@ -41,7 +41,7 @@
                     <h2><?php echo htmlspecialchars($gmail); ?></h2>
                 </div>
                 <h3>CEO</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, voluptatem.</p>
+                <p>"Memimpin dengan Visi, Membangun dengan Aksi."</p>
             </div>
             <div class="icon">
                 <?php
@@ -187,12 +187,15 @@
             </html>
         </div>
         <div class="deskripsiLainnyaPegawai">
-            <img src="../img/kakak01.avif" alt="gambarDeskripsiPegawai">
+            <img src="../img/gambarHome.png" alt="gambarDeskripsiPegawai">
             <div class="textDeskripsiPegawai">
                 <p>
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Error quas quod magni cupiditate officiis
-                    illo quos. Cupiditate fugiat odio sunt distinctio optio ex nihil ducimus maiores repellendus
-                    corporis nisi adipisci doloremque, sed eaque qui esse tempore iste eos sint similique.
+                    "Selamat datang di Grosir Hulu, tempat di mana kualitas, kepercayaan, dan kepuasan pelanggan
+                    menjadi prioritas utama. Kami menyediakan beragam produk berkualitas dengan harga yang kompetitif,
+                    dirancang untuk memenuhi kebutuhan Anda dengan mudah dan nyaman. Dengan layanan yang cepat, aman,
+                    dan terpercaya, kami berkomitmen untuk memberikan pengalaman belanja yang menyenangkan. Mari temukan
+                    apa yang Anda cari, karena kepuasan Anda adalah kebahagiaan kami. Belanja bersama kami sekarang dan
+                    rasakan pelayanan terbaik yang telah kami siapkan khusus untuk Anda!"
                 </p>
             </div>
         </div>
@@ -288,12 +291,15 @@
             </div>
         </div>
         <div class="deskripsiLainnyaProduk">
-            <img src="../img/kakak01.avif" alt="gambarDeskripsiProduk">
+            <img src="../img/gambarHome.png" alt="gambarDeskripsiProduk">
             <div class="textDeskripsiProduk">
                 <p>
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Error quas quod magni cupiditate officiis
-                    illo quos. Cupiditate fugiat odio sunt distinctio optio ex nihil ducimus maiores repellendus
-                    corporis nisi adipisci doloremque, sed eaque qui esse tempore iste eos sint similique.
+                    "Selamat datang di Grosir Hulu, tempat di mana kualitas, kepercayaan, dan kepuasan pelanggan
+                    menjadi prioritas utama. Kami menyediakan beragam produk berkualitas dengan harga yang kompetitif,
+                    dirancang untuk memenuhi kebutuhan Anda dengan mudah dan nyaman. Dengan layanan yang cepat, aman,
+                    dan terpercaya, kami berkomitmen untuk memberikan pengalaman belanja yang menyenangkan. Mari temukan
+                    apa yang Anda cari, karena kepuasan Anda adalah kebahagiaan kami. Belanja bersama kami sekarang dan
+                    rasakan pelayanan terbaik yang telah kami siapkan khusus untuk Anda!"
                 </p>
             </div>
         </div>

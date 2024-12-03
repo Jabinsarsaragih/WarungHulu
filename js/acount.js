@@ -1,5 +1,5 @@
 const sentences = [
-    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi ullam quos impedit eius sit aliquid molestiae id quae omnis quas ? ",
+    "Belanja Mudah, Cepat, dan Aman!, Temukan Semua Kebutuhanmu di Sini!",
 ]
 
 let sentencesIndex = 0;

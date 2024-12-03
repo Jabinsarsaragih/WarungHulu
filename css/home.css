@@ -79,6 +79,7 @@ section .left {
 
 
 section .left .deskripsi h2 {
+    margin-left: 30px;
     margin-top: -30px;
     font-size: 3.5rem;
     letter-spacing: -3px;
@@ -495,6 +496,20 @@ section .right .imgRight img#belakang {
     margin: 0 20px;
 }
 
-.memberPegawaiLengkap .deskripsiLainnyaPegawai .textDeskripsiPegawai {
+.memberPegawaiLengkap .deskripsiLainnyaPegawai img,
+.memberProdukLengkap .deskripsiLainnyaProduk img {
+    width: 450px;
+}
+
+.memberPegawaiLengkap .deskripsiLainnyaPegawai .textDeskripsiPegawai,
+.memberProdukLengkap .deskripsiLainnyaProduk .textDeskripsiProduk {
     margin: 0 20px;
+    font-size: 1.3rem;
+    letter-spacing: 1px;
+    text-indent: 30px;
+}
+
+.memberPegawaiLengkap .deskripsiLainnyaPegawai .textDeskripsiPegawai p,
+.memberProdukLengkap .deskripsiLainnyaProduk .textDeskripsiProduk p {
+    line-height: 30px;
 }
