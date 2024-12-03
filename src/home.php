@@ -7,6 +7,7 @@
     <title>Home | </title>
     <link rel="stylesheet" href="../css/home.css">
     <link rel="stylesheet" href="../css/tambah.css">
+    <link rel="stylesheet" href="../css/edit.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 
@@ -24,101 +25,51 @@
     <section>
         <aside class="left">
             <div class="deskripsi">
-                <h1>Jabinsar Saragih</h1>
+                <?php
+                session_start();
+                include '../koneksi.php';
+
+                // Periksa apakah user sudah login
+                if (!isset($_SESSION['gmail'])) {
+                    header("Location: ../src/login.php"); // Jika belum login, arahkan ke login
+                    exit();
+                }
+
+                $gmail = $_SESSION['gmail']; // Ambil Gmail dari session
+                ?>
+                <div class="deskripsiPegawai">
+                    <h2><?php echo htmlspecialchars($gmail); ?></h2>
+                </div>
                 <h3>CEO</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, voluptatem.</p>
             </div>
             <div class="icon">
+                <?php
+                    include "../koneksi.php";
+
+                    // Ambil data dari tabel `data`
+                    $result = mysqli_query($conn, "SELECT * FROM data");
+                ?>
                 <div class="iconPegawai">
                     <a href="#"><i class="fa-solid fa-users"></i></a>
                     <div class="memberPegawai">
-                        <div class="pegawai" id="pegawaiOne">
-                            <div class="imgPegawai">
-                                <img src="../img/iconPegawai.png" alt="gambarPegawai">
-                            </div>
-                            <div class="keteranganPegawai">
-                                <h3>Nama Pegawai</h3>
-                                <p>Lorem, ipsum dolor.</p>
-                            </div>
-                        </div>
+                        <?php while ($row = mysqli_fetch_assoc($result)) { ?>
                         <div class="pegawai">
                             <div class="imgPegawai">
-                                <img src="../img/iconPegawai.png" alt="gambarPegawai">
+                                <img src="../img/pegawai/<?php echo htmlspecialchars($row['foto']); ?>"
+                                    alt="Foto Pegawai">
                             </div>
                             <div class="keteranganPegawai">
-                                <h3>Nama Pegawai</h3>
-                                <p>Lorem, ipsum dolor.</p>
+                                <h3><?php echo htmlspecialchars($row['nama']); ?></h3>
                             </div>
                         </div>
-                        <div class="pegawai">
-                            <div class="imgPegawai">
-                                <img src="../img/iconPegawai.png" alt="gambarPegawai">
-                            </div>
-                            <div class="keteranganPegawai">
-                                <h3>Nama Pegawai</h3>
-                                <p>Lorem, ipsum dolor.</p>
-                            </div>
-                        </div>
-                        <div class="pegawai">
-                            <div class="imgPegawai">
-                                <img src="../img/iconPegawai.png" alt="gambarPegawai">
-                            </div>
-                            <div class="keteranganPegawai">
-                                <h3>Nama Pegawai</h3>
-                                <p>Lorem, ipsum dolor.</p>
-                            </div>
-                        </div>
-                        <div class="pegawai">
-                            <div class="imgPegawai">
-                                <img src="../img/iconPegawai.png" alt="gambarPegawai">
-                            </div>
-                            <div class="keteranganPegawai">
-                                <h3>Nama Pegawai</h3>
-                                <p>Lorem, ipsum dolor.</p>
-                            </div>
-                        </div>
+                        <?php } ?>
                     </div>
                 </div>
                 <div class="iconProduk">
                     <a href="#"><i class="fa-solid fa-store"></i></a>
                     <div class="memberProduk">
                         <div class="produk" id="pegawaiOne">
-                            <div class="imgProduk">
-                                <img src="../img/iconBarang.png" alt="gambarProduk">
-                            </div>
-                            <div class="keteranganProduk">
-                                <h3>Nama Produk</h3>
-                                <p>Lorem, ipsum dolor.</p>
-                            </div>
-                        </div>
-                        <div class="produk">
-                            <div class="imgProduk">
-                                <img src="../img/iconBarang.png" alt="gambarProduk">
-                            </div>
-                            <div class="keteranganProduk">
-                                <h3>Nama Produk</h3>
-                                <p>Lorem, ipsum dolor.</p>
-                            </div>
-                        </div>
-                        <div class="produk">
-                            <div class="imgProduk">
-                                <img src="../img/iconBarang.png" alt="gambarProduk">
-                            </div>
-                            <div class="keteranganProduk">
-                                <h3>Nama Produk</h3>
-                                <p>Lorem, ipsum dolor.</p>
-                            </div>
-                        </div>
-                        <div class="produk">
-                            <div class="imgProduk">
-                                <img src="../img/iconBarang.png" alt="gambarProduk">
-                            </div>
-                            <div class="keteranganProduk">
-                                <h3>Nama Produk</h3>
-                                <p>Lorem, ipsum dolor.</p>
-                            </div>
-                        </div>
-                        <div class="produk">
                             <div class="imgProduk">
                                 <img src="../img/iconBarang.png" alt="gambarProduk">
                             </div>
@@ -145,95 +96,95 @@
         <div class="fullPegawai">
             <h1>Pegawai </h1>
             <div class="pegawai">
-                <div class="ketPegawai">
-                    <div class="gambarPegawai">
-                        <img src="../img/kirey.jpg" alt="gambarPegawai">
-                    </div>
-                    <div class="deskripsiPegawai">
-                        <h2>Jabinsar Saragih</h2>
-                    </div>
-                    <div class="iconPegawai">
-                        <a href="#"><i class="fa-solid fa-user-pen"></i></a>
-                    </div>
-                </div>
-                <div class="ketPegawai">
-                    <div class="gambarPegawai">
-                        <img src="../img/kirey.jpg" alt="gambarPegawai">
-                    </div>
-                    <div class="deskripsiPegawai">
-                        <h2>Jabinsar Saragih</h2>
-                    </div>
-                    <div class="iconPegawai">
-                        <a href="#"><i class="fa-solid fa-user-pen"></i></a>
-                    </div>
-                </div>
-                <div class="ketPegawai">
-                    <div class="gambarPegawai">
-                        <img src="../img/kirey.jpg" alt="gambarPegawai">
-                    </div>
-                    <div class="deskripsiPegawai">
-                        <h2>Jabinsar Saragih</h2>
-                    </div>
-                    <div class="iconPegawai">
-                        <a href="#"><i class="fa-solid fa-user-pen"></i></a>
-                    </div>
-                </div>
-                <div class="ketPegawai">
-                    <div class="gambarPegawai">
-                        <img src="../img/kirey.jpg" alt="gambarPegawai">
-                    </div>
-                    <div class="deskripsiPegawai">
-                        <h2>Jabinsar Saragih</h2>
-                    </div>
-                    <div class="iconPegawai">
-                        <a href="#"><i class="fa-solid fa-user-pen"></i></a>
-                    </div>
-                </div>
-                <div class="ketPegawai">
-                    <div class="gambarPegawai">
-                        <img src="../img/kirey.jpg" alt="gambarPegawai">
-                    </div>
-                    <div class="deskripsiPegawai">
-                        <h2>Jabinsar Saragih</h2>
-                    </div>
-                    <div class="iconPegawai">
-                        <a href="#"><i class="fa-solid fa-user-pen"></i></a>
-                    </div>
-                </div>
-                <div class="ketPegawai">
-                    <div class="gambarPegawai">
-                        <img src="../img/kirey.jpg" alt="gambarPegawai">
-                    </div>
-                    <div class="deskripsiPegawai">
-                        <h2>Jabinsar Saragih</h2>
-                    </div>
-                    <div class="iconPegawai">
-                        <a href="#"><i class="fa-solid fa-user-pen"></i></a>
-                    </div>
-                </div>
-            </div>
-            <!-- TambahPegawai -->
-    <div class="tambah">
-        <div class="closeTambah">
-            <i class="fa-solid fa-xmark"></i>
-        </div>
-        <div class="ImgTambah">
-            <img src="../img/hulu store.png" alt="logoTambah">
-        </div>
-        <!-- Form Tambah -->
-        <form action="tambah.php" method='POST'>
-            <h1>Tambah</h1>
-            <div class="inputFoto">
-                <label for="file" class='label'>Foto</label>
-                <input type="file" class='input' name='file' id='file' required autocomplete="off">
-            </div>
-            <div class="inputNama">
-                <label for="text" class='label'>Nama</label>
-                <input type="text" class='text' name='text' id='text' required autocomplete="off">
-            </div>
-        </form>
-    </div>
+                <?php
+                            include "../koneksi.php";
 
+                            // Cek koneksi
+                            if (!$conn) {
+                                die("Koneksi gagal: " . mysqli_connect_error());
+                            }
+
+                            // Ambil data dari tabel
+                            $result = mysqli_query($conn, "SELECT * FROM data");
+
+                            // Cek apakah ada data
+                            if (mysqli_num_rows($result) > 0) {
+                                while ($row = mysqli_fetch_assoc($result)) {
+                                    // Gunakan heredoc untuk output HTML
+                                    echo <<<HTML
+                                    <div class='ketPegawai'>
+                                        <div class='gambarPegawai'>
+                                            <img src="../img/pegawai/{$row['foto']}" alt='gambarPegawai'>
+                                        </div>
+                                        <div class='deskripsiPegawai'>
+                                            <h2>{$row['nama']}</h2>
+                                        </div>
+                                        <div class='iconPegawai'>
+                                            <a href="../log/edit.php?id={$row['id']}"><i class='fa-solid fa-user-pen'></i></a>
+                                            <a href="../log/hapus.php?id={$row['id']}"><i class='fa-solid fa-user-minus'></i></a>
+            </div>
+        </div>
+        HTML;
+        }
+        } else {
+        echo "Tidak ada data pegawai ditemukan.";
+        }
+
+        // Tutup koneksi jika sudah selesai
+        mysqli_close($conn);
+        ?>
+            </div>
+
+
+
+            <?php
+                    // Koneksi ke database
+                    include "../koneksi.php";
+
+                    // Ambil data dari tabel
+                    $result = mysqli_query($conn, "SELECT * FROM data");
+                    ?>
+
+            <!DOCTYPE html>
+            <html lang="en">
+
+            <head>
+                <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <title>Tambah Data</title>
+                <link rel="stylesheet" href="style.css">
+            </head>
+
+            <body>
+                <!-- Tombol Tambah -->
+                <button id="openForm"><i class="fa-solid fa-user-plus"></i></button>
+
+                <!-- Form Tambah -->
+                <div id="overlay"></div>
+
+                <div id="formTambah">
+                    <div class="form-container">
+                        <div class="close" id="closeForm">×</div>
+                        <form action="../log/tambah.php" method="POST" enctype="multipart/form-data">
+                            <h2>Tambah Data</h2>
+                            <div>
+                                <label for="nama">Nama:</label>
+                                <input type="text" name="nama" id="nama" required>
+                            </div>
+                            <div>
+                                <label for="foto">Foto:</label>
+                                <input type="file" name="foto" id="foto" required>
+                            </div>
+                            <button type="submit">Simpan</button>
+                        </form>
+                    </div>
+                </div>
+
+
+                <script src="script.js"></script>
+            </body>
+
+            </html>
         </div>
         <div class="deskripsiLainnyaPegawai">
             <img src="../img/kakak01.avif" alt="gambarDeskripsiPegawai">
@@ -349,5 +300,7 @@
     </div>
 
 </body>
+<script src="../js/edit.js"></script>
+<script src="../js/tambah.js"></script>
 
 </html>

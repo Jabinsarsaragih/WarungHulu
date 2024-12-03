@@ -78,13 +78,14 @@ section .left {
 }
 
 
-section .left .deskripsi h1 {
+section .left .deskripsi h2 {
     margin-top: -30px;
     font-size: 3.5rem;
     letter-spacing: -3px;
     color: #3a7ca5;
     font-family: "Fira Sans Condensed",
         sans-serif;
+    margin-bottom: 15px;
 }
 
 section .left .deskripsi h3 {
@@ -191,17 +192,18 @@ section .left .icon .iconProduk .memberProduk .produk {
     justify-content: space-evenly;
     align-items: center;
     border-bottom: 3px solid rgb(46, 43, 101);
-    background:#5e63ae;
+    background: #5e63ae;
     border-radius: 10px;
     margin: 1px;
     padding-right: 5px;
     width: 100%;
 }
 
-section .left .icon .iconPegawai .memberPegawai #pegawaiOne,
-section .left .icon .iconProduk .memberProduk #pegawaiOne {
-    margin-top: 5em;
+section .left .icon .iconPegawai .memberPegawai .pegawai:first-child,
+section .left .icon .iconProduk .memberProduk .produk:first-child {
+    margin-top: 30px;
 }
+
 
 section .left .icon .iconPegawai .memberPegawai .pegawai .imgPegawai,
 section .left .icon .iconProduk .memberProduk .produk .imgProduk {
@@ -306,9 +308,9 @@ section .right .imgRight img#belakang {
     font-size: 3em;
     letter-spacing: -1px;
     font-family: "Fira Sans Condensed",
-    sans-serif;
+        sans-serif;
     color: #828223;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); 
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
 }
 
 .memberPegawaiLengkap .fullPegawai,
@@ -324,9 +326,9 @@ section .right .imgRight img#belakang {
     margin-left: 50px;
     padding: 10px;
     color: #828223;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);    
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
     font-family: "Fira Sans Condensed",
-    sans-serif;
+        sans-serif;
 }
 
 .memberPegawaiLengkap .fullPegawai .pegawai,
@@ -368,7 +370,7 @@ section .right .imgRight img#belakang {
     border-radius: 30px;
     width: 300px;
     display: flex;
-    max-height: 150px;
+    max-height: 200px;
     justify-content: space-around;
     align-items: center;
     flex-direction: column;
@@ -384,12 +386,15 @@ section .right .imgRight img#belakang {
     position: absolute;
     top: 0px;
     width: 40%;
+    height: 100%;
     cursor: pointer;
 }
 
 .pegawai .ketPegawai .gambarPegawai img,
 .produk .ketProduk .gambarProduk img {
     width: 100%;
+    height: 100%;
+    object-fit: cover;
     display: inline-block;
     transition: opacity 0.3s ease-in-out;
     position: relative;
@@ -398,9 +403,11 @@ section .right .imgRight img#belakang {
 
 .pegawai .ketPegawai .gambarPegawai img:hover,
 .produk .ketProduk .gambarProduk img:hover {
+    transition: 1s;
     opacity: 0;
-    pointer-events: none;
+    pointer-events: auto;
 }
+
 
 
 .pegawai .ketPegawai .deskripsiPegawai,
@@ -413,27 +420,38 @@ section .right .imgRight img#belakang {
     max-height: 150px;
     flex-direction: column;
 }
+
 .pegawai .ketPegawai .deskripsiPegawai h2,
-.produk .ketProduk .deskripsiProduk h2{
+.produk .ketProduk .deskripsiProduk h2 {
     font-size: 2.5rem;
     margin-bottom: 10px;
     color: #52521b;
 
-}   
+}
+
 .pegawai .ketPegawai .deskripsiPegawai h4,
-.produk .ketProduk .deskripsiProduk h4{
+.produk .ketProduk .deskripsiProduk h4 {
     font-size: 2rem;
     color: #777736;
-}   
+}
 
 
 .pegawai .ketPegawai .iconPegawai,
 .produk .ketProduk .iconProduk {
     width: 100%;
     text-align: right;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
+
 .pegawai .ketPegawai .iconPegawai a,
-.produk .ketProduk .iconProduk a{
+.produk .ketProduk .iconProduk a {
+    font-size: 1.2rem;
+}
+
+.pegawai .ketPegawai .iconPegawai a,
+.produk .ketProduk .iconProduk a {
     color: #4d81ae;
 }
 
@@ -449,12 +467,14 @@ section .right .imgRight img#belakang {
     margin: 0 30px;
     font-size: 1.3em;
 }
+
 .fullPegawai .iconLengkapPegawai a:first-child,
-.fullProduk .iconLengkapProduk a:first-child{
+.fullProduk .iconLengkapProduk a:first-child {
     color: #4f9d4f;
 }
+
 .fullPegawai .iconLengkapPegawai a:last-child,
-.fullProduk .iconLengkapProduk a:last-child{
+.fullProduk .iconLengkapProduk a:last-child {
     color: #b05050;
 }
 
@@ -474,6 +494,7 @@ section .right .imgRight img#belakang {
     padding: 30px;
     margin: 0 20px;
 }
-.memberPegawaiLengkap .deskripsiLainnyaPegawai .textDeskripsiPegawai{
+
+.memberPegawaiLengkap .deskripsiLainnyaPegawai .textDeskripsiPegawai {
     margin: 0 20px;
 }

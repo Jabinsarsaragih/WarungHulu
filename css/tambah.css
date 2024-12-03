@@ -1,248 +1,164 @@
-@import url('https://fonts.googleapis.com/css2?family=Estonia&family=Fira+Sans+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Potta+One&display=swap');
-
-:root {
-    --black: #212026;
-    --brown: #bc9745;
-    --gray: #67666b;
-    --greenYoung: #b0d44c;
-    --greenOld: #54711b;
-    --white: #f2ffb7;
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #f3f3f3, #ededed);
+    color: #333;
 }
 
-/* Start Login */
+table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
 
-.tambah {
-    position: absolute;
-    top: 100px;
-    left: 450px;
-    width: 500px;
-    padding: 20px;
-    background: var(--black);
-    border-radius: 10px;
+table th,
+table td {
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+table th {
+    background: #0072ff;
+    color: white;
+}
+
+table tr:nth-child(even) {
+    background: #f9f9f9;
+}
+
+.thumbnail {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+button {
     display: block;
-    border: 3px solid var(--gray);
-}
-
-.tambah .closeTambah i {
-    font-size: 2rem;
-    cursor: pointer;
-    color: #99aa99;
-    transition: .5s;
-}
-
-.tambah .closeTambah i:hover {
-    transform: scale(1.1);
-}
-
-.tambah .imgTambah {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 10px;
-    position: relative;
-    top: -50px;
-    left: 50px;
-}
-
-.tambah .imgTambah img {
-    width: 40%;
-    position: relative;
-    left: -50px;
-}
-
-.tambah .imgTambah h1 {
-    font-size: 3em;
-    position: relative;
-    left: -70px;
-    color: var(--brown);
-    font-family: "Fira Sans Condensed",
-        sans-serif;
-}
-
-.tambah form {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    position: relative;
-    top: -80px;
-}
-
-.tambah form h1 {
-    color: var(--greenYoung);
-    font-size: 2.5rem;
-    font-family: "Fira Sans Condensed",
-        sans-serif;
-}
-
-.tambah form .inputFoto,
-.tambah form .inputNama {
-    font-size: 1.25rem;
-    position: relative;
-    --primary: #bc9745;
-    margin-top: 15px;
-}
-
-.tambah form .inputFoto .input,
-.tambah form .inputNama .input {
-    all: unset;
-    color: #fefefe;
-    padding: 1rem;
-    border: 1px solid #9e9e9e;
-    border-radius: 10px;
-    transition: 150ms cubic-bezier(0.4, 0, 0.2, 1);
-    width: 300px;
-}
-
-.tambah form .inputFoto .label,
-.tambah form .inputTambah .label {
-    position: absolute;
-    top: 1rem;
-    left: 1rem;
-    color: #d4d4d4;
-    pointer-events: none;
-    transition: 150ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.tambah form .inputFoto .input:focus,
-.tambah form .inputNama .input:focus {
-    border: 1px solid var(--primary);
-}
-
-.tambah form .inputFoto .input:is(:focus, :valid)~label,
-.tambah form .inputNama .input:is(:focus, :valid)~label {
-    transform: translateY(-120%) scale(0.7);
-    background-color: var(--gray);
-    padding-inline: 0.3rem;
-    color: var(--primary);
+    margin: 20px auto;
+    padding: 10px 20px;
+    background: #0072ff;
+    color: white;
+    border: none;
     border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
 }
 
-
-.tambah .send {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    top: 50px;
+button:hover {
+    background: #0056cc;
 }
 
-/* End Login */
-
-/* Start Singin */
-.edit {
-    position: absolute;
-    top: 100px;
-    left: 450px;
-    width: 500px;
+#formTambah {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    max-width: 400px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
     padding: 20px;
-    background: var(--black);
-    border-radius: 10px;
     display: none;
-    border: 3px solid var(--gray);
+    /* Awalnya tersembunyi */
+    z-index: 10;
 }
 
-.edit .closeSEdit i {
-    font-size: 2rem;
-    cursor: pointer;
-    color: #99aa99;
-    transition: .5s;
+#formTambah.active {
+    display: block;
+    /* Tampilkan jika ditambahkan kelas active */
 }
 
-.edit .closeSEdit i:hover {
-    transform: scale(1.1);
-}
-
-.edit .imgEdit {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 10px;
+.form-container {
     position: relative;
-    top: -50px;
-    left: 50px;
+    padding: "15pxs";
 }
 
-.edit .imgEdit img {
-    width: 40%;
-    position: relative;
-    left: -50px;
-}
-
-.edit .imgEdit h1 {
-    font-size: 3em;
-    position: relative;
-    left: -70px;
-    color: var(--brown);
-    font-family: "Fira Sans Condensed",
-        sans-serif;
-}
-
-.edit form {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    position: relative;
-    top: -80px;
-}
-
-.edit form h1 {
-    color: var(--greenYoung);
-    font-size: 2.5rem;
-    font-family: "Fira Sans Condensed",
-        sans-serif;
-}
-
-.edit form .inputFoto,
-.edit form .inputNama {
-    font-size: 1.25rem;
-    position: relative;
-    --primary: #bc9745;
-    margin-top: 15px;
-}
-
-.edit form .inputFoto .input,
-.edit form .inputNama .input {
-    all: unset;
-    color: #fefefe;
-    padding: 1rem;
-    border: 1px solid #9e9e9e;
-    border-radius: 10px;
-    transition: 150ms cubic-bezier(0.4, 0, 0.2, 1);
-    width: 300px;
-}
-
-.edit form .inputFoto .label,
-.edit form .inputNama .label {
+.close {
     position: absolute;
-    top: 1rem;
-    left: 1rem;
-    color: #d4d4d4;
-    pointer-events: none;
-    transition: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    color: #888;
+    cursor: pointer;
+    transition: color 0.3s ease;
 }
 
-.edit form .inputFoto .input:focus,
-.edit form .inputNama .input:focus {
-    border: 1px solid var(--primary);
+.close:hover {
+    color: #000;
 }
 
-.edit form .inputFoto .input:is(:focus, :valid)~label,
-.edit form .inputNama .input:is(:focus, :valid)~label {
-    transform: translateY(-120%) scale(0.7);
-    background-color: var(--gray);
-    padding-inline: 0.3rem;
-    color: var(--primary);
+form {
+    padding: 30px;
+}
+
+form h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+    text-align: center;
+}
+
+form div {
+    margin-bottom: 15px;
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #444;
+}
+
+form input[type="text"],
+form input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
     border-radius: 5px;
+    font-size: 14px;
+    color: #333;
 }
 
-.edit .send {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    top: 50px;
+form input[type="file"] {
+    padding: 5px;
 }
 
-/* End Singin */
+form button {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    background: linear-gradient(135deg, #00c6ff, #0072ff);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+form button:hover {
+    background: linear-gradient(135deg, #0072ff, #0056cc);
+}
+
+/* Overlay Background */
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: none;
+    /* Awalnya tersembunyi */
+    z-index: 5;
+}
+
+#overlay.active {
+    display: block;
+    /* Tampilkan jika ditambahkan kelas active */
+}

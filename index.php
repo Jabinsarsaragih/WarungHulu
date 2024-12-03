@@ -40,8 +40,6 @@
                 <img src="img/toko02.png">
             </div>
         </div>
-
-        <a href="src/home.php">home</a>
     </section>
     <footer>
         <div class="copyright">
@@ -58,7 +56,7 @@
             <img src="img/hulu store.png" alt="logo">
             <h1>Hulu's store</h1>
         </div>
-        <form action="proseslogin.php" method='POST'>
+        <form action="log/login.php" method='POST'>
             <h1>Login</h1>
             <div class="inputGmail">
                 <input type="gmail" class='input' name='gmail' id='gmail' required autocomplete="off">
@@ -69,7 +67,9 @@
                 <label for="password" class='label'>Password</label>
             </div>
             <div class="send">
-                <input type="submit" name="Login" value="Login">Kirim
+                <input type="submit" name="login" value="login" style="background: #67666b; color: white; border: none;
+                    padding: 10px 20px; border-radius: 5px; font-size: 1rem; cursor: pointer; transition: background
+                    0.3s; font-size: 1.5rem;"></button>
             </div>
         </form>
     </div>
@@ -83,7 +83,7 @@
             <img src="img/hulu store.png" alt="logo">
             <h1>Hulu's store</h1>
         </div>
-        <form action="prosessingin.php" method='POST'>
+        <form action="log/singin.php" method='POST'>
             <h1>Singin</h1>
             <div class="inputGmail">
                 <input type="gmail" class='input' name='gmail' id='gmail' required autocomplete="off">
@@ -94,7 +94,9 @@
                 <label for="password" class='label'>Password</label>
             </div>
             <div class="send">
-                <input type="submit" name="Login" value="Login">Kirim
+                <input type="submit" name="singin" value="singin" style="background: #67666b; color: white; border: none;
+                    padding: 10px 20px; border-radius: 5px; font-size: 1rem; cursor: pointer; transition: background
+                    0.3s; font-size: 1.5rem;"></button>
             </div>
         </form>
     </div>
